@@ -1,5 +1,12 @@
-service:
-  name: sls-course
+org: unflores
+console: true
+
+service: auction-course
+
+# Block deployment when formatting is invalid
+configValidationMode: error
+
+frameworkVersion: ^3.19.0
 
 plugins:
   - serverless-bundle
@@ -10,7 +17,8 @@ provider:
   runtime: nodejs12.x
   memorySize: 256
   stage: ${opt:stage, 'dev'}
-  
+  region: eu-west-3
+
 functions:
   hello:
     handler: src/handlers/hello.handler
