@@ -1,5 +1,5 @@
 org: unflores
-console: true
+# console: true
 
 service: auction-course
 
