@@ -9,7 +9,7 @@ configValidationMode: error
 frameworkVersion: ^3.19.0
 
 plugins:
-  - serverless-bundle
+  - serverless-esbuild
   - serverless-pseudo-parameters
 
 provider:
