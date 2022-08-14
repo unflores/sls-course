@@ -15,6 +15,10 @@ export async function getAuctionById(id) {
 
     auction = result.Item;
   } catch(error) {
+    throw new createError.InternalServerError(error)
+  }
+
+  if(auction === undefined) {
     throw new createError.NotFound(`Auction with ID ${id} not found.`)
   }
 
